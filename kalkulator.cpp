@@ -1,8 +1,9 @@
-// fungsi mencari faktorial
-long long factorial(int n) {
-    long long hasil = 1;
-        for (int i = 2; i <= n; i++) {
-            hasil *= i;
-        }
-        return hasil;
+//fungsi mengecek bilangan prima
+bool isPrima (int n) {
+    if (n <= 1) return false;
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0)
+            return false;
+    }
+    return true;
 }
