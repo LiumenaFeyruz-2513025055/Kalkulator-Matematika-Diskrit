@@ -64,7 +64,7 @@ int main() {
         cout << "4. cek bilangan prima" << endl;
         cout << "5. keluar" << endl;
 
-        cout << "Pilih menu: ";
+        cout << "Silahkan pilih menu: ";
         cin >> inputan;
 
         switch (inputan)
