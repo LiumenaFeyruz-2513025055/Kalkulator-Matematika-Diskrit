@@ -94,3 +94,19 @@ int main() {
             cout << "FPB dari " << n << " dan " << r << " adalah " << fpb(n, r) << endl;
             cout << "KPK dari " << n << " dan " << r << " adalah " << kpk(n, r) << endl;
             break;
+        //menu bilangan prima
+         case 4:
+            cout << "Masukkan angka: ";
+            cin >> n;
+            if (isPrima(n))
+                cout << n << " adalah bilangan prima." << endl;
+            else
+                cout << n << " bukan bilangan prima." << endl;
+            break;
+        case 5:
+            cout << "terimakasih telah menggunakan program ini\n";
+            break;
+        }
+    }
+    return 0;
+}
