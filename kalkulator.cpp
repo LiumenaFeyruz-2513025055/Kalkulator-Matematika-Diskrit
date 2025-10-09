@@ -58,6 +58,25 @@ int main() {
         cout << "Pilih menu: ";
         cin >> inputan;
 
+        switch (inputan)
+        {
+        // menu kombinasi
+        case 1:
+            cout << "Masukkan n: ";
+            cin >> n;
+            cout << "Masukkan nilai r: ";
+            cin >> r;
+            cout << "C(" << n << ", " << r << ") = " << kombinasi(n, r) << endl;
+            break;
+        // menu permutasi
+        case 2:
+            cout << "Masukkan nilai n: ";
+            cin >> n;
+            cout << "Masukkan nilai r: ";
+            cin >> r;
+            cout << "P(" << n << ", " << r << ") = " << permutasi(n, r) << endl;
+            break;
+
 int main () {
     return 0;
 }
