@@ -59,13 +59,15 @@ int main() {
     int n, r;
 
     while( inputan != 5) {
-        cout << "\nKALKULATOR MATEMATIKA DISKRIT" << endl;
-        cout << "1. kombinasi" << endl;
-        cout << "2. permutasi" << endl;
-        cout << "3. kpk dan fpb" << endl;
-        cout << "4. cek bilangan prima" << endl;
-        cout << "5. keluar" << endl;
-
+        cout << "\n============================================\n";
+        cout << "        KALKULATOR MATEMATIKA DISKRIT       \n";
+        cout << "============================================\n";
+        cout << "1. Kombinasi\n";
+        cout << "2. Permutasi\n";
+        cout << "3. KPK dan FPB\n";
+        cout << "4. Cek Bilangan Prima\n";
+        cout << "5. Keluar\n";
+        cout << "============================================\n";
         cout << "Silahkan pilih menu: ";
         cin >> inputan;
 
@@ -112,4 +114,5 @@ int main() {
     }
     return 0;
 }
+
 
