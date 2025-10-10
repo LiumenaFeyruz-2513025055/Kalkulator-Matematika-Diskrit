@@ -27,7 +27,8 @@ long long factorial(int n) {
 
 // fungsi mencari kombinasi n! / (n - r)! * r!
 long long kombinasi(int n, int r) {
-    if (r > n) {
+    if (n < 0 || r < 0 || r > n) {
+        cout << "Input tidak valid! n dan r harus >= 0 dan r tidak boleh lebih besar dari n." << endl;
         return 0;
     }
     return factorial(n) / (factorial(n - r) * factorial(r));
@@ -35,7 +36,8 @@ long long kombinasi(int n, int r) {
 
 // fungsi mencari permutasi, n! / (n - r)!
 long long permutasi(int n, int r) {
-    if (r > n) {
+    if (n < 0 || r < 0 || r > n) {
+        cout << "Input tidak valid! n dan r harus >= 0 dan r tidak boleh lebih besar dari n." << endl;
         return 0;
     }
     return factorial(n) / factorial(n - r);
@@ -110,3 +112,4 @@ int main() {
     }
     return 0;
 }
+
