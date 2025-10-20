@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 
 // fungsi fpb
@@ -59,6 +60,7 @@ int main() {
     char ulang;
 
     while (inputan != 5) {
+            system("cls");
         cout << "\n============================================\n";
         cout << "        KALKULATOR MATEMATIKA DISKRIT       \n";
         cout << "============================================\n";
@@ -161,6 +163,7 @@ int main() {
 
         default:
             cout << "Pilihan tidak valid, silakan coba lagi.\n";
+            system("pause");
             break;
         }
     }
