@@ -18,6 +18,7 @@ int kpk(int a, int b) {
 
 // fungsi mencari faktorial
 long long factorial(int n) {
+    if (n < 0) return 0;
     long long hasil = 1;
         for (int i = 2; i <= n; i++) {
             hasil *= i;
@@ -57,6 +58,8 @@ bool isPrima (int n) {
 int main() {
     int inputan;
     int n, r;
+    const int MAX_FAKTORIAL = 20;
+    const int MAX_ANGKA = 1000000;
 
     while( inputan != 5) {
         cout << "\n============================================\n";
@@ -79,6 +82,14 @@ int main() {
             cin >> n;
             cout << "Masukkan nilai r: ";
             cin >> r;
+            if (n > MAX_FAKTORIAL || r > MAX_FAKTORIAL) {
+                cout << "Nilai terlalu besar! Maksimal " << MAX_FAKTORIAL << " untuk operasi faktorial." << endl;
+                break;
+            }
+            if (n < 0 || r < 0) {
+                cout << "Nilai tidak boleh negatif!" << endl;
+                break;
+            }
             cout << "C(" << n << ", " << r << ") = " << kombinasi(n, r) << endl;
             break;
         // menu permutasi
@@ -87,6 +98,14 @@ int main() {
             cin >> n;
             cout << "Masukkan nilai r: ";
             cin >> r;
+             if (n > MAX_FAKTORIAL || r > MAX_FAKTORIAL) {
+                cout << "Nilai terlalu besar! Maksimal " << MAX_FAKTORIAL << " untuk operasi faktorial." << endl;
+                break;
+            }
+            if (n < 0 || r < 0) {
+                cout << "Nilai tidak boleh negatif!" << endl;
+                break;
+            }
             cout << "P(" << n << ", " << r << ") = " << permutasi(n, r) << endl;
             break;
         // menu fpb
@@ -95,6 +114,14 @@ int main() {
             cin >> n;
             cout << "Masukkan angka kedua: ";
             cin >> r;
+             if (n > MAX_ANGKA || r > MAX_ANGKA) {
+                cout << "Nilai terlalu besar! Maksimal " << MAX_ANGKA << " untuk operasi ini." << endl;
+                break;
+            }
+            if (n <= 0 || r <= 0) {
+                cout << "Nilai harus positif!" << endl;
+                break;
+            }
             cout << "FPB dari " << n << " dan " << r << " adalah " << fpb(n, r) << endl;
             cout << "KPK dari " << n << " dan " << r << " adalah " << kpk(n, r) << endl;
             break;
@@ -102,17 +129,27 @@ int main() {
          case 4:
             cout << "Masukkan angka: ";
             cin >> n;
+            if (n > MAX_ANGKA) {
+                cout << "Nilai terlalu besar! Maksimal " << MAX_ANGKA << "." << endl;
+                break;
+            }
+            if (n < 0) {
+                cout << "Bilangan negatif tidak bisa dicek keprimaan." << endl;
+                break;
+            }
             if (isPrima(n))
                 cout << n << " adalah bilangan prima." << endl;
             else
                 cout << n << " bukan bilangan prima." << endl;
             break;
         case 5:
-            cout << "terimakasih telah menggunakan program ini\n";
+            cout << "Terima kasih telah menggunakan program ini!" << endl;
+            cout << "Sampai jumpa! Tekan Enter untuk meninggalkan aplikasi..." << endl;
+            break;
+        default:
+            cout << "Pilihan tidak valid, silakan coba lagi." << endl;
             break;
         }
     }
     return 0;
 }
-
-
